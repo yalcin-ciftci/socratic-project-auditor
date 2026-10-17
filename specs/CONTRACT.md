@@ -2332,7 +2332,7 @@ Belirsiz `"OTHER"` etiketi kaldırılmıştır. Yalnızca aşağıdaki kombinasy
    - **4. Öncelik (`"NONE_INDEPENDENT"`):** Yalnızca `assistance_log_present == true`, `session_mode == "INDEPENDENT_EVIDENCE_COLLECTION"` ve `known_disclosed_assistance_class == "NONE_OBSERVED"` olduğunda taban `"NONE_INDEPENDENT"` olabilir.
 3. **Yeni Denemede Yardım Mirası:** Aynı `(objective_id, artifact_id)` veya aynı `snapshot_id` üzerinde daha önce `"RUBRIC_SHOWN"` veya `"DIAGNOSIS_SHOWN"` olayı kaydedilmişse, yeni bir `attempt_id` açılması bu geçmişi sıfırlamaz (`PRE-09`).
 4. **Bağımsız Deneme Adaylık Kilidi (`eligible_for_independent_attempt_submission` — `R6`):**
-   - [[🛠️ 600-Arsenal/Ajanlar/bagimsiz-ogrenme-degerlendiricisi/CONTRACT|Bağımsız Öğrenme Değerlendiricisi Sözleşmesi]] uyarınca, ipucu veya dış referans kullanılan bir deneme `"NONE_INDEPENDENT"` adayı olarak sunulamaz.
+   - harici Bağımsız Öğrenme Değerlendiricisi sözleşmesi (bu dağıtıma dahil değildir) uyarınca, ipucu veya dış referans kullanılan bir deneme `"NONE_INDEPENDENT"` adayı olarak sunulamaz.
    - Bu nedenle `evaluator_bridge_manifest.eligible_for_independent_attempt_submission` alanı **yalnız ve ancak** şu dört koşulun tamamı sağlandığında `true` olabilir:
      1. `compatible_with_learning_evaluator == true`
      2. `scope_evaluation.session_mode_evaluated == "INDEPENDENT_EVIDENCE_COLLECTION"`

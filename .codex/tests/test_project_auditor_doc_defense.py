@@ -12,14 +12,14 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / ".codex" / "scripts"))
+sys.path.insert(0, str(ROOT / "src"))
 
 from project_auditor_runtime.delivery import DeliveryGate
 from project_auditor_runtime.runner import ProjectAuditorRuntime
 from project_auditor_runtime.store import RuntimeStore, StoreError, doc_package_digest
 from project_auditor_runtime.validation import RuntimeValidator, doc_package_hash, extract_doc_defense_schemas
 
-AGENT = ROOT / "🛠️ 600-Arsenal" / "Ajanlar" / "proje-denetleyici-ve-ogrenim-sorgulayicisi"
+AGENT = ROOT / "specs"
 
 
 def doc_fixtures() -> list[dict]:

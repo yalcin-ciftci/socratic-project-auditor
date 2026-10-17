@@ -517,10 +517,16 @@ class RuntimeValidator:
         if not self._unique(questions, "question_id"):
             return False
         all_criteria = []
+        by_id = {q['question_id']: q for q in questions}
         for q in questions:
             if not self._unique(q["immutable_criteria"], "criterion_id"):
                 return False
-            all_criteria.extend(c["criterion_id"] for c in q["immutable_criteria"])
+            if q['parent_question_id']:
+                parent = by_id.get(q['parent_question_id'])
+                if parent is None or q['immutable_criteria'] != parent['immutable_criteria']:
+                    return False
+            else:
+                all_criteria.extend(c["criterion_id"] for c in q["immutable_criteria"])
         if len(all_criteria) != len(set(all_criteria)):
             return False
         by_id = {q["question_id"]: q for q in questions}

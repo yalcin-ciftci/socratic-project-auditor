@@ -40,7 +40,7 @@ Belge ve kod savunmaları aynı projeye (`project_id`) bağlı **ayrı oturumlar
 ## Yerel girişler
 
 - Launcher: `.codex/Invoke-ProjectAuditor.ps1`.
-- Python modülü: `.codex/scripts/project_auditor_runtime/`.
+- Python modülü: `src/project_auditor_runtime/`.
 - Native rol kaydı: `.codex/agents/proje-denetleyici-ve-ogrenim-sorgulayicisi.toml`; `.codex/config.toml` rol anahtarı `proje_denetcisi_ve_ogrenim_sorgulayicisi`.
 - Çalışma ortamı: `.codex/.venv-project-auditor/Scripts/python.exe`.
 - Bağımlılıklar: paket içindeki `requirements.txt`. Ortam yoksa Morks `python -m venv .codex/.venv-project-auditor` ve ortamın Python'u ile requirements kurulumunu yürütür. Kullanıcıdan parola/API anahtarı istenmez.

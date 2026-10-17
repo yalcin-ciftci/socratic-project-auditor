@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "socratic-project-auditor"
+version = "0.2.0"
+description = "Schema-validated, Socratic code and document defense in your terminal"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.20.0", "rfc3339-validator>=0.1.4"]
+
+[project.scripts]
+auditor = "project_auditor_runtime.cli:main"
+
+[tool.setuptools]
+packages = ["project_auditor_runtime", "project_auditor_runtime.specs"]
+package-dir = {project_auditor_runtime = "src/project_auditor_runtime", "project_auditor_runtime.specs" = "specs"}
+
+[tool.setuptools.package-data]
+"project_auditor_runtime.specs" = ["*.md"]

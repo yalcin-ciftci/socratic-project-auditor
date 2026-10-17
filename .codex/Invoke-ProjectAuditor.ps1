@@ -27,7 +27,7 @@ $ErrorActionPreference = 'Stop'
 $vaultRoot = Split-Path -Parent $PSScriptRoot
 $pythonRuntime = Join-Path $PSScriptRoot '.venv-project-auditor/Scripts/python.exe'
 if (-not (Test-Path -LiteralPath $pythonRuntime)) { throw 'Project Auditor Python environment missing. See RUNTIME.md.' }
-$env:PYTHONPATH = Join-Path $PSScriptRoot 'scripts'
+$env:PYTHONPATH = Join-Path $vaultRoot 'src'
 $env:PYTHONIOENCODING = 'utf-8'
 $callArgs = @('-X','utf8','-m','project_auditor_runtime',$Action,'--vault',$vaultRoot,'--ledger-id',$LedgerId)
 foreach ($entry in @(

@@ -28,8 +28,8 @@ from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / ".codex" / "scripts"))
-AGENT = ROOT / "🛠️ 600-Arsenal" / "Ajanlar" / "proje-denetleyici-ve-ogrenim-sorgulayicisi"
+sys.path.insert(0, str(ROOT / "src"))
+AGENT = ROOT / "specs"
 
 from project_auditor_runtime.validation import RuntimeValidator
 from project_auditor_runtime.store import RuntimeStore, StoreError

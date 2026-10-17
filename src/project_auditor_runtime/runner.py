@@ -8,12 +8,13 @@ from .backend import BackendError, CodexBackend
 from .delivery import DeliveryGate
 from .store import RuntimeStore, StoreError, package_digest, doc_package_digest
 from .validation import RuntimeValidator, strict_json, is_doc_defense_payload
+from .paths import resolve_specs
 
 
 class ProjectAuditorRuntime:
     def __init__(self, vault: Path, state_dir: Path, backend=None, semantic_reviewer=None):
         self.vault = Path(vault).resolve()
-        self.agent_dir = self.vault / '🛠️ 600-Arsenal/Ajanlar/proje-denetleyici-ve-ogrenim-sorgulayicisi'
+        self.agent_dir = resolve_specs(self.vault)
         self.store = RuntimeStore(state_dir)
         self.backend = backend or CodexBackend(self.agent_dir)
         reviewer = semantic_reviewer or getattr(self.backend, 'review', None)

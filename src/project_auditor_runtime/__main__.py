@@ -5,6 +5,8 @@ import sys
 
 from .runner import ProjectAuditorRuntime
 from .validation import strict_json
+from .backend import create_backend
+from .paths import resolve_specs
 
 
 def main(argv: list[str] | None = None):
@@ -15,7 +17,9 @@ def main(argv: list[str] | None = None):
         'record-doc-response', 'doc-teach', 'void-doc-question',
         'pause-doc-session', 'resume-doc-session', 'stop-doc-session', 'update-doc-version',
     ])
-    parser.add_argument('--vault', type=Path, default=Path(__file__).resolve().parents[3])
+    parser.add_argument('--vault', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--provider', choices=['codex', 'ollama', 'gemini', 'openai', 'openrouter'], default='codex')
+    parser.add_argument('--model')
     parser.add_argument('--state-dir', type=Path)
     parser.add_argument('--request', type=Path)
     parser.add_argument('--ledger-id', default='LEDGER-PROJECT-AUDITOR')
@@ -33,8 +37,9 @@ def main(argv: list[str] | None = None):
     parser.add_argument('--deliver', action='store_true')
     args = parser.parse_args(argv)
     state = args.state_dir or args.vault / '.codex/scripts/.state/project-auditor'
-    runtime = ProjectAuditorRuntime(args.vault, state)
     try:
+        backend = create_backend(resolve_specs(args.vault), provider=args.provider, model=args.model)
+        runtime = ProjectAuditorRuntime(args.vault, state, backend=backend)
         if args.action == 'init-ledger':
             result = {'ok': True, 'disclosure_state': runtime.store.initialize_ledger(args.ledger_id)}
         elif args.action == 'state':

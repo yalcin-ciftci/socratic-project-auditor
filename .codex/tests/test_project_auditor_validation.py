@@ -8,10 +8,10 @@ import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT / '.codex' / 'scripts'))
+sys.path.insert(0, str(ROOT / 'src'))
 from project_auditor_runtime.validation import RuntimeValidator, canonical_hash, strict_json
 
-AGENT = ROOT / '🛠️ 600-Arsenal' / 'Ajanlar' / 'proje-denetleyici-ve-ogrenim-sorgulayicisi'
+AGENT = ROOT / 'specs'
 
 
 def fixtures(filename):
