@@ -226,7 +226,7 @@ class ProjectAuditorDocDefenseTests(unittest.TestCase):
         o_leak = copy.deepcopy(o_ext)
         o_leak["orchestrator_only_payload"]["defense_response_observations"][0]["external_verification_request"][
             "sanitized_public_search_topic"
-        ] = "RoleLint TR Türkçe veri ve yazılım ilanlarındaki muğlak beceri ifadelerini normalize ederek"
+        ] = "Demo Catalog classifies ambiguous product descriptions from offline catalogs"
         res_leak = self.validator.postflight_doc_defense(base_in, o_leak, batch_registry=batch_reg, session_state=base_in["session_state_snapshot"])
         self.assertFalse(res_leak["ok"])
         self.assertEqual(res_leak["rule"], "DOC-POST-09")
@@ -258,8 +258,8 @@ class ProjectAuditorDocDefenseTests(unittest.TestCase):
             gate = DeliveryGate(store, safe_semantic_reviewer)
 
             # 1. Initialize Code Defense ledger on the same project to verify session separation
-            code_ledger = store.initialize_ledger("LEDGER-ROLELINT-CODE-01")
-            self.assertEqual(code_ledger["ledger_source_id"], "LEDGER-ROLELINT-CODE-01")
+            code_ledger = store.initialize_ledger("LEDGER-DEMO-CODE-01")
+            self.assertEqual(code_ledger["ledger_source_id"], "LEDGER-DEMO-CODE-01")
 
             # 2. Initialize Document Defense session
             p1 = copy.deepcopy(self.prep_in)
@@ -386,7 +386,7 @@ class ProjectAuditorDocDefenseTests(unittest.TestCase):
                     "sözlük dışı ifadeleri kaçırma riskini azaltır."
                 ),
                 "suggested_approaches": [
-                    "Cümle başına ortalama çıkarım gecikmesini ve bellek ayak izini örnek bir ilan kümesinde karşılaştırma yaklaşımı.",
+                    "Compare average inference latency and memory footprint on a sample product catalog.",
                     "Sözlük aşamasını tamamen kaldırmak yerine yalnızca yüksek güvenli negatifleri filtrelemek için kullanma yaklaşımı.",
                 ],
                 "downstream_affected_dimensions": [

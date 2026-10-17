@@ -1,5 +1,7 @@
 # Socratic Project Auditor & Learning Examiner (`v1.3`)
 
+> Örnek proje belgeleri, kimlikleri ve öğrenci yanıtları kurgusal test verileridir. Example project documents, identifiers, and learner responses are fictional test fixtures.
+
 **Fail-Closed Socratic Code & Document Defense Runtime with JSON Schema Draft 2020-12 Validation, Two-Stage Pedagogical Leakage Gate, and Immutable SQLite State Tracking**
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)

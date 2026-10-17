@@ -2072,8 +2072,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
   "task_id": "DOCAUD-20261017-001",
   "as_of": "2026-10-17T14:30:00+03:00",
   "operation": "PREPARE_PROJECT_DEFENSE",
-  "project_id": "PROJ-ROLELINT-TR",
-  "defense_session_id": "DDS-ROLELINT-20261017-01",
+  "project_id": "PROJ-DEMO",
+  "defense_session_id": "DDS-DEMO-20261017-01",
   "learning_domain": "PYTHON_DATA_ENG",
   "allowed_assistance_level": "QUESTION_AND_CONCEPTUAL_HINT",
   "tool_permissions": {
@@ -2084,14 +2084,14 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
     "subagent_invocation_allowed": false
   },
   "document_descriptor": {
-    "document_id": "DOC-ROLELINT-ARCH-V1",
-    "document_title": "RoleLint TR — İlan Ayrıştırma ve Aday Eşleştirme Mimari Tasarımı",
+    "document_id": "DOC-DEMO-ARCH-V1",
+    "document_title": "Demo Catalog - Product Description Classification",
     "document_type": "ARCHITECTURE_SPEC",
     "document_version": "v1.0",
     "document_sha256": "sha256:4a8d1f7e5c3b2a1908f7e6d5c4b3a291807f6e5d4c3b2a1908f7e6d5c4b3a291",
     "prior_document_version": null,
     "prior_document_sha256": null,
-    "document_summary": "Türkçe iş ilanlarından deterministik kural katmanı ve şema doğrulamalı çıkarım ile rol gereksinimlerini ayrıştıran yerel veri hattı tasarımı.",
+    "document_summary": "A local pipeline classifies ambiguous product descriptions from offline catalog records.",
     "batch_index": 1,
     "total_batches": 2
   },
@@ -2171,8 +2171,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
       "passage_id": "PSG-01-PROBLEM-CORE",
       "section_id": "SEC-01-PROBLEM",
       "heading_path": "1. Problem Tanımı ve Kapsam Sınırları",
-      "verbatim_text": "RoleLint TR, Türkçe veri ve yazılım ilanlarındaki muğlak beceri ifadelerini normalize ederek adayın doğrulanmış kanıtlarıyla karşılaştırır. Sistem yalnız çevrimdışı indirilen ilan metinlerini işler; canlı kazıma (scraping) ve otomatik başvuru kapsam dışıdır.",
-      "passage_sha256": "sha256:ea51983f5c98900e6193c9a1f985f0d0c237157176d3c2a57cf125317b534277",
+      "verbatim_text": "Demo Catalog classifies ambiguous product descriptions from offline catalogs; live scraping and automatic purchasing are out of scope.",
+      "passage_sha256": "sha256:dc757d096a5e3fc2fc9ac8cb621e4641890eddbaa8988f43a1539d481ac034ad",
       "completeness": "COMPLETE",
       "claim_epistemic_status": "PLAN",
       "evidence_basis": "USER_DECLARATION",
@@ -2185,8 +2185,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
       "passage_id": "PSG-02-PIPELINE-TEXT",
       "section_id": "SEC-02-PIPELINE",
       "heading_path": "2. İki Aşamalı Ayrıştırma Yöntemi ve Tercihler",
-      "verbatim_text": "İlk aşamada deterministik sözlük ve regex kurallarıyla zorunlu teknoloji etiketleri çıkarılır; ikinci aşamada ise yalnız belirsiz cümleler şema kısıtlı yerel modele gönderilir. Bu sayede her ilanda tam metin model çağrısı yapılmaz.",
-      "passage_sha256": "sha256:3dcf04cab6c30c471c8b02540f64a44067e0d6d7f388900a836419a935e076be",
+      "verbatim_text": "A deterministic dictionary and regex rules first extract required product category tags; only ambiguous descriptions are sent to a schema-constrained local model, avoiding full-text model calls for every catalog item.",
+      "passage_sha256": "sha256:d4a4ead6ddd388d7e196406aa5d7daf4ed297e826f17bed6c1cc018bdde559c0",
       "completeness": "COMPLETE",
       "claim_epistemic_status": "IDEA",
       "evidence_basis": "USER_DECLARATION",
@@ -2211,8 +2211,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
     "missing_contribution_fields": []
   },
   "session_state_snapshot": {
-    "defense_session_id": "DDS-ROLELINT-20261017-01",
-    "project_id": "PROJ-ROLELINT-TR",
+    "defense_session_id": "DDS-DEMO-20261017-01",
+    "project_id": "PROJ-DEMO",
     "session_revision": 1,
     "session_status": "ACTIVE",
     "current_document_version": "v1.0",
@@ -2241,9 +2241,9 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
   "error_code": null,
   "error_detail": null,
   "project_defense_scope_evaluation": {
-    "project_id": "PROJ-ROLELINT-TR",
-    "defense_session_id": "DDS-ROLELINT-20261017-01",
-    "document_id": "DOC-ROLELINT-ARCH-V1",
+    "project_id": "PROJ-DEMO",
+    "defense_session_id": "DDS-DEMO-20261017-01",
+    "document_id": "DOC-DEMO-ARCH-V1",
     "document_version_evaluated": "v1.0",
     "document_sha256_evaluated": "sha256:4a8d1f7e5c3b2a1908f7e6d5c4b3a291807f6e5d4c3b2a1908f7e6d5c4b3a291",
     "document_type_evaluated": "ARCHITECTURE_SPEC",
@@ -2332,7 +2332,7 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
       "heading_path": "1. Problem Tanımı ve Kapsam Sınırları",
       "target_dimension": "BOUNDARIES_AND_RISKS",
       "claim_epistemic_status": "PLAN",
-      "neutral_question_prompt": "1. bölümde sistemin yalnız çevrimdışı indirilen ilan metinlerini işleyeceği ve canlı kazımanın kapsam dışı bırakıldığı belirtiliyor. Bu sınır kararının arkasındaki temel teknik ve operasyonel gerekçeler nelerdir?"
+      "neutral_question_prompt": "Section 1 says the system processes only offline catalog descriptions and excludes live scraping. What technical and operational reasons support this boundary?"
     },
     "uninspected_section_ids": [
       "SEC-03-EVALUATION"
@@ -2356,7 +2356,7 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
           "SEC-03-EVALUATION"
         ],
         "addresses_missing_contribution": false,
-        "neutral_question_prompt": "1. bölümde sistemin yalnız çevrimdışı indirilen ilan metinlerini işleyeceği ve canlı kazımanın kapsam dışı bırakıldığı belirtiliyor. Bu sınır kararının arkasındaki temel teknik ve operasyonel gerekçeler nelerdir?",
+        "neutral_question_prompt": "Section 1 says the system processes only offline catalog descriptions and excludes live scraping. What technical and operational reasons support this boundary?",
         "expected_explanation_criteria": [
           {
             "criterion_id": "DCRIT-Q01-01",
@@ -2462,8 +2462,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
   "task_id": "DOCAUD-20261017-002",
   "as_of": "2026-10-17T14:40:00+03:00",
   "operation": "ANALYZE_PROJECT_DEFENSE",
-  "project_id": "PROJ-ROLELINT-TR",
-  "defense_session_id": "DDS-ROLELINT-20261017-01",
+  "project_id": "PROJ-DEMO",
+  "defense_session_id": "DDS-DEMO-20261017-01",
   "learning_domain": "PYTHON_DATA_ENG",
   "allowed_assistance_level": "QUESTION_AND_CONCEPTUAL_HINT",
   "tool_permissions": {
@@ -2474,14 +2474,14 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
     "subagent_invocation_allowed": false
   },
   "document_descriptor": {
-    "document_id": "DOC-ROLELINT-ARCH-V1",
-    "document_title": "RoleLint TR — İlan Ayrıştırma ve Aday Eşleştirme Mimari Tasarımı",
+    "document_id": "DOC-DEMO-ARCH-V1",
+    "document_title": "Demo Catalog - Product Description Classification",
     "document_type": "ARCHITECTURE_SPEC",
     "document_version": "v1.0",
     "document_sha256": "sha256:4a8d1f7e5c3b2a1908f7e6d5c4b3a291807f6e5d4c3b2a1908f7e6d5c4b3a291",
     "prior_document_version": null,
     "prior_document_sha256": null,
-    "document_summary": "Türkçe iş ilanlarından deterministik kural katmanı ve şema doğrulamalı çıkarım ile rol gereksinimlerini ayrıştıran yerel veri hattı tasarımı.",
+    "document_summary": "Offline catalog records are classified through deterministic rules and schema-constrained extraction in a local data pipeline.",
     "batch_index": 1,
     "total_batches": 2
   },
@@ -2561,8 +2561,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
       "passage_id": "PSG-01-PROBLEM-CORE",
       "section_id": "SEC-01-PROBLEM",
       "heading_path": "1. Problem Tanımı ve Kapsam Sınırları",
-      "verbatim_text": "RoleLint TR, Türkçe veri ve yazılım ilanlarındaki muğlak beceri ifadelerini normalize ederek adayın doğrulanmış kanıtlarıyla karşılaştırır. Sistem yalnız çevrimdışı indirilen ilan metinlerini işler; canlı kazıma (scraping) ve otomatik başvuru kapsam dışıdır.",
-      "passage_sha256": "sha256:ea51983f5c98900e6193c9a1f985f0d0c237157176d3c2a57cf125317b534277",
+      "verbatim_text": "Demo Catalog classifies ambiguous product descriptions from offline catalogs; live scraping and automatic purchasing are out of scope.",
+      "passage_sha256": "sha256:dc757d096a5e3fc2fc9ac8cb621e4641890eddbaa8988f43a1539d481ac034ad",
       "completeness": "COMPLETE",
       "claim_epistemic_status": "PLAN",
       "evidence_basis": "USER_DECLARATION",
@@ -2575,8 +2575,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
       "passage_id": "PSG-02-PIPELINE-TEXT",
       "section_id": "SEC-02-PIPELINE",
       "heading_path": "2. İki Aşamalı Ayrıştırma Yöntemi ve Tercihler",
-      "verbatim_text": "İlk aşamada deterministik sözlük ve regex kurallarıyla zorunlu teknoloji etiketleri çıkarılır; ikinci aşamada ise yalnız belirsiz cümleler şema kısıtlı yerel modele gönderilir. Bu sayede her ilanda tam metin model çağrısı yapılmaz.",
-      "passage_sha256": "sha256:3dcf04cab6c30c471c8b02540f64a44067e0d6d7f388900a836419a935e076be",
+      "verbatim_text": "A deterministic dictionary and regex rules first extract required product category tags; only ambiguous descriptions are sent to a schema-constrained local model, avoiding full-text model calls for every catalog item.",
+      "passage_sha256": "sha256:d4a4ead6ddd388d7e196406aa5d7daf4ed297e826f17bed6c1cc018bdde559c0",
       "completeness": "COMPLETE",
       "claim_epistemic_status": "IDEA",
       "evidence_basis": "USER_DECLARATION",
@@ -2601,8 +2601,8 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
     "missing_contribution_fields": []
   },
   "session_state_snapshot": {
-    "defense_session_id": "DDS-ROLELINT-20261017-01",
-    "project_id": "PROJ-ROLELINT-TR",
+    "defense_session_id": "DDS-DEMO-20261017-01",
+    "project_id": "PROJ-DEMO",
     "session_revision": 3,
     "session_status": "ACTIVE",
     "current_document_version": "v1.0",
@@ -2619,9 +2619,9 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
   },
   "prior_defense_batch_package": {
     "batch_exam_id": "DBATCH-20261017-001",
-    "defense_session_id": "DDS-ROLELINT-20261017-01",
-    "project_id": "PROJ-ROLELINT-TR",
-    "document_id": "DOC-ROLELINT-ARCH-V1",
+    "defense_session_id": "DDS-DEMO-20261017-01",
+    "project_id": "PROJ-DEMO",
+    "document_id": "DOC-DEMO-ARCH-V1",
     "document_version": "v1.0",
     "document_sha256": "sha256:4a8d1f7e5c3b2a1908f7e6d5c4b3a291807f6e5d4c3b2a1908f7e6d5c4b3a291",
     "created_as_of": "2026-10-17T14:30:00+03:00",
@@ -2668,7 +2668,7 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
         ]
       }
     ],
-    "batch_package_sha256": "0e67bc9c149af96bbf3b81a30a0f4a7d8b435e65586444a3334ea5e56d5e54c9"
+    "batch_package_sha256": "3180490a69d0badf978e5510a1b5e82ae9d7189cb8ba1a2193823f7a811cca9b"
   },
   "defense_responses": [
     {
@@ -2720,9 +2720,9 @@ Bu sözleşme, mevcut altıncı uzman ajan olan **Proje Denetleyici ve Öğrenim
   "error_code": null,
   "error_detail": null,
   "project_defense_scope_evaluation": {
-    "project_id": "PROJ-ROLELINT-TR",
-    "defense_session_id": "DDS-ROLELINT-20261017-01",
-    "document_id": "DOC-ROLELINT-ARCH-V1",
+    "project_id": "PROJ-DEMO",
+    "defense_session_id": "DDS-DEMO-20261017-01",
+    "document_id": "DOC-DEMO-ARCH-V1",
     "document_version_evaluated": "v1.0",
     "document_sha256_evaluated": "sha256:4a8d1f7e5c3b2a1908f7e6d5c4b3a291807f6e5d4c3b2a1908f7e6d5c4b3a291",
     "document_type_evaluated": "ARCHITECTURE_SPEC",
